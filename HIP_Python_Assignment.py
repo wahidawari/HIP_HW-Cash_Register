@@ -22,7 +22,7 @@ if tax == "y" :
   while Cash < total * Local_tax: 
    print("You still need to pay: $", format(((total * Local_tax) - Cash), ",.2f"), sep = "")
    print("")
-   print("Your Total is: $", total * Local_tax, sep = "")
+   print("Your Total is: $", format(total * Local_tax, ",.2f"), sep = "")
    print("")
    Cash = float(input("Enter in Money Provided by Customer: $"))
  #what if they pay more: 
