@@ -7,7 +7,7 @@ print("When Done, Enter: 0")
 #storing the prices
 #Loop until customer enters 0 
 price = float(input("Enter First Item price: $"))
-while price > 0: 
+while price != 0: 
   total = price + total
   price = float( input("Enter Next Item Price: $"))
 #Adding on Tax
