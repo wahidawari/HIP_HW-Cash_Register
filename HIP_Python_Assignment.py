@@ -25,16 +25,12 @@ if tax == "y" :
    print("Your Total is: $", format(total * Local_tax, ",.2f"), sep = "")
    print("")
    Cash = float(input("Enter in Money Provided by Customer: $"))
- #what if they pay more: 
-  if Cash > total * Local_tax:
+ #what if they pay more or the exac amount: 
+  if Cash >= total * Local_tax:
     print("Your Change is: $",  format(Cash - (total * Local_tax), ",.2f"), sep = "")
     print("")
     print("Thank You for Shopping Here!")
-  #What if they pay the exact amount: 
-  elif Cash == total * Local_tax:
-    print("Your Change is: $",  format(Cash - (total * Local_tax), ",.2f"), sep = "")
-    print("")
-    print("Thank You for Shopping Here!")
+  
 #What if there is no tax
 else: 
   print("Your total is: $", format(total, ",.2f"), sep = "")
@@ -48,13 +44,9 @@ else:
    print("Your Total is: $", total, sep = "")
    print("")
    Cash = float(input("Enter in Money Provided by Customer: $"))
-  #what if they pay more: 
-  if Cash > total:
+  #what if they pay more or the exact amount: 
+  if Cash >= total:
     print("Your Change is: $",  format(Cash - (total ), ",.2f"), sep = "")
     print("")
     print("Thank You for Shopping Here!")
-  #What if they pay the exact amount: 
-  elif Cash == total :
-    print("Your Change is: $",  format(Cash - (total ), ",.2f"), sep = "")
-    print("")
-    print("Thank You for Shopping Here!")
+  
