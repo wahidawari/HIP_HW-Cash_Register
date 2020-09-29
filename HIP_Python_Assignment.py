@@ -14,7 +14,7 @@ while price != 0:
 tax = input("Is Sales Tax Applicable? (y/n): ").lower()
 print("")
 if tax == "y" :
-  print("Your total is: $", round(total * Local_tax, 2), sep = "")
+  print("Your total is: $", format(total * Local_tax, ",.2f"), sep = "")
   print("")
   Cash = float(input("Enter in Money Provided by Customer: $"))
   print("")
@@ -22,22 +22,17 @@ if tax == "y" :
   while Cash < round(total * Local_tax, 2): 
    print("You still need to pay: $", round(((total * Local_tax) - Cash),2), sep = "")
    print("")
-   print("Your Total is: $", round(total * Local_tax, 2), sep = "")
+   print("Your Total is: $", format(total * Local_tax, ",.2f"), sep = "")
    print("")
    Cash = float(input("Enter in Money Provided by Customer: $"))
-  print("Your Change is: $", format((total * Local_tax) - Cash, ",.2f"), sep = "")
+  #If they pay more or equal
+  final_total = round(total * Local_tax, 2)
+  print("Your Change is: $", format(Cash - ((final_total)), ",.2f"), sep = "")
   print("")
   print("Thank You for Shopping Here!")
-  
- #what if they pay more or the exac amount: 
-  if Cash >= total * Local_tax:
-    print("Your Change is: $", format(Cash - (total * Local_tax), ",.2f"), sep = "")
-    print("")
-    print("Thank You for Shopping Here!")
-  
 #What if there is no tax
 else: 
-  print("Your total is: $", round(total, 2), sep = "")
+  print("Your total is: $", format(total, ",.2f"), sep = "")
   print("")
   Cash = float(input("Enter in Money Provided by Customer: $"))
   print("")
