@@ -31,7 +31,7 @@ if tax == "y" :
   
  #what if they pay more or the exac amount: 
   if Cash >= total * Local_tax:
-    print("Your Change is: $", format((total * Local_tax) - Cash, ",.2f"), sep = "")
+    print("Your Change is: $", format(Cash - (total * Local_tax), ",.2f"), sep = "")
     print("")
     print("Thank You for Shopping Here!")
   
