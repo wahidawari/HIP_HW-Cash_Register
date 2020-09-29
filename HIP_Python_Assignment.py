@@ -52,7 +52,7 @@ else:
   while Cash < total : 
    print("You still need to pay: $", format(((total) - Cash), ",.2f"), sep = "")
    print("")
-   print("Your Total is: $", total, sep = "")
+   print("Your Total is: $", format(total,",.2f"), sep = "")
    print("")
    Cash = float(input("Enter in Money Provided by Customer: $"))
 
